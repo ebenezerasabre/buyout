@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/headerCategoryParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/home_top">
+        <TextView
+            android:id="@+id/categoryParentTopWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textSize="22sp"
+            android:fontFamily="@font/alegreya"
+            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:drawableStart="@drawable/ic_chevron_left_white_24dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+        <FrameLayout
+            android:id="@+id/the_category_part"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginBottom="20dp"
+            />
+        <FrameLayout
+            android:id="@+id/the_subcategory_part"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/headerCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/home_top">
+                <TextView
+                    android:id="@+id/myAccountTopWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My account"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:drawableStart="@drawable/ic_keyboard_arrow_left_white_24dp"
+                    />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal information"
+                android:fontFamily="@font/caudex"
+                android:textSize="18dp"
+                android:layout_margin="16dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#1f1f1f"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="firstname"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#474747"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp" />
+                <TextView
+                    android:id="@+id/myAccountFirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ebenezer"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#909090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="lastname"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#474747"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp" />
+                <TextView
+                    android:id="@+id/myAccountLastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asabre"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#909090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone number"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#474747"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp" />
+                <TextView
+                    android:id="@+id/myAccountPhoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0554290691"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#909090" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#474747"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp" />
+                <TextView
+                    android:id="@+id/myAccountEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ewquest@gmail.com"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#909090" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery location(s)"
+                android:fontFamily="@font/caudex"
+                android:textSize="18dp"
+                android:layout_margin="16dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#1f1f1f"
+                />
+            <TextView
+                android:id="@+id/myAccountAddNewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add new location"
+                android:layout_gravity="center_horizontal"
+                android:textSize="18sp"
+                android:fontFamily="@font/alegreya"
+                android:textColor="@color/purple"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/holderMyAccountLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/myAccountCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

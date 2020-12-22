@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:padding="8dp"
+    android:gravity="center"
+    android:background="#ffffff">
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="23-03-2020"
+        android:fontFamily="@font/alegreya"
+        android:layout_gravity="end"
+        android:layout_margin="4dp" />
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:src="@drawable/filter_body"
+        android:layout_margin="4dp" />
+    <TextView
+        android:id="@+id/newsMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="God who at sundry times and in divers manners spake in time past"
+        android:padding="18dp"
+        android:textColor="#909090"
+        android:fontFamily="@font/alegreya"
+        android:textSize="18sp"
+        android:background="#ffffff"
+        android:layout_margin="4dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Source-Ghana Web"
+            android:padding="8dp"
+            android:fontFamily="@font/alegreya"
+            android:layout_alignParentStart="true"
+            android:layout_margin="8dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="8dp">
+            <TextView
+                android:id="@+id/newsThumbsDownCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="45"
+                android:layout_margin="4dp"
+                android:fontFamily="@font/alegreya" />
+            <ImageView
+                android:id="@+id/newsThumbsDown"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_thumb_down_black_24dp"
+                android:layout_margin="4dp"
+                android:tag="thumbsDown" />
+            <ImageView
+                android:id="@+id/newsThumbsUp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_thumb_up_black_24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:tag="thumbsUp" />
+            <TextView
+                android:id="@+id/newsThumbsUpCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya"
+                tools:text="15"
+                android:layout_margin="4dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

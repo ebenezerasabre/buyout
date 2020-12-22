@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginStart="16dp"
+    >
+
+    <TextView
+        android:id="@+id/notification_badge1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:padding="4dp"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/alegreya"
+        android:gravity="center"
+        android:background="@drawable/badges1"
+        tools:text="9+"
+        />
+
+</FrameLayout>
+
+    <!--    // Circle background view-->

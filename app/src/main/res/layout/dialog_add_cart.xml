@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/holderAddCartImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/addCartImageCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"/>
+                <TextView
+                    android:id="@+id/addCartName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/alegreya"
+                    android:text="Air Jordan"
+                    android:textColor="#474747"
+                    android:textSize="25sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/caudex"
+                        android:text="Sub Total  "
+                        android:textColor="#474747"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/addCartSubTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alegreya"
+                        android:text=" GH¢ 23"
+                        android:textColor="#A386E1"
+                        android:textSize="30sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select size "
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:textColor="#cb7bcb"
+                        android:layout_marginStart="8dp"
+                        android:textAllCaps="true" />
+                    <TextView
+                        android:id="@+id/addCartTheSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="M"
+                        android:fontFamily="@font/andika"
+                        android:layout_marginStart="8dp"
+                        android:textSize="18sp"
+                        android:textColor="#474747" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderAddCartSelectSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select color "
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:textColor="#cb7bcb"
+                        android:layout_marginStart="8dp"
+                        android:textAllCaps="true" />
+                    <TextView
+                        android:id="@+id/addCartTheColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Black"
+                        android:fontFamily="@font/andika"
+                        android:layout_marginStart="8dp"
+                        android:textSize="18sp"
+                        android:textColor="#474747"
+                        />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderAddCartSelectColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <com.dev.materialspinner.MaterialSpinner
+                    android:id="@+id/addCartQuantitySpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addCartAddToCartFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_gravity="bottom|end"
+        android:text="add to cart"
+        app:icon="@drawable/ic_outline_shopping_cart_24"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addCartCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

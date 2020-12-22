@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_top"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                >
+                <ImageView
+                    android:id="@+id/homeFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_home_white_24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    />
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/homeSearchView"
+                    android:layout_width="340dp"
+                    android:layout_height="40dp"
+                    android:layoutDirection="rtl"
+                    android:padding="4dp"
+                    app:defaultQueryHint="@string/search_all_categories"
+                    android:layout_marginStart="8dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/homeScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/seeAllCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/categories"
+                        android:textSize="18sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/see_all"
+                        android:textColor="#6E586E"
+                        android:textSize="16sp"
+                        android:tag="@string/categories"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/getAllCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/seeAllCat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="Trending"
+                        android:textSize="18sp"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/see_all"
+                        android:textColor="#6E586E"
+                        android:textSize="16sp"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/getAllTrending"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trending"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:visibility="gone"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderTrending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_margin="8dp"
+                    />
+
+
+                <!--            android:textColor="#292929"-->
+                <RelativeLayout
+                    android:id="@+id/seeAllHotSales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alegreya"
+                        android:text="@string/hot_sale"
+                        android:textSize="20sp"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/see_all"
+                        android:textColor="#6E586E"
+                        android:textSize="16sp"
+                        android:tag="@string/hot_sale"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/getAllHotSales"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot sales"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderHotSalesHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/seeAllFeaturedProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/featured_products"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/see_all"
+                        android:textColor="#6E586E"
+                        android:textSize="16sp"
+                        android:tag="@string/featured_products"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <!--            android:textColor="#af97af"-->
+                <TextView
+                    android:id="@+id/getAllFeatured"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Featured"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderFeaturedProductsHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/seeAllHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/history"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        android:text="@string/see_all"
+                        android:textColor="#6E586E"
+                        android:textSize="16sp"
+                        android:tag="@string/history"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/getAllHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="History"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:visibility="gone"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderHistoryHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/homeExploreFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|right"
+        app:icon="@drawable/ic_explore_white_24dp"
+        android:text="explore"
+        android:backgroundTint="#A386E1"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

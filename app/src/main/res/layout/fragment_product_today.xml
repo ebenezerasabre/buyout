@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/headerCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/home_top"
+                >
+                <TextView
+                    android:id="@+id/todayTopWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Product of the day"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:drawableStart="@drawable/ic_keyboard_arrow_left_white_24dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderTodayImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <!--    image count-->
+                <LinearLayout
+                    android:id="@+id/todayImageCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/todayName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/andika"
+                    android:textSize="18sp"
+                    tools:text="The long queen"
+                    android:textColor="#474747"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/proTodayItems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+
+                    >
+                    <TextView
+                        android:id="@+id/todayNewPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/andika"
+                        tools:text="GH¢ 17.58"
+                        android:textColor="#909090"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="17sp"
+                        android:layout_margin="4dp"
+                        />
+                    <ImageView
+                        android:id="@+id/todayAddCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_outline_shopping_cart_light_24"
+                        android:layout_margin="4dp"
+                        />
+                    <!--        android:src="@drawable/ic_outline_shopping_cart_24"-->
+                    <ImageView
+                        android:id="@+id/todayAddWishList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_favorite_border_light_24"
+                        android:layout_margin="4dp"
+                        />
+                    <!--        android:src="@drawable/ic_baseline_favorite_border_24"-->
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/todayDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya"
+                    android:padding="16dp"
+                    tools:text="Some lorem ipsum some lorem ipsum some lorem ipsum"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#474747"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/todayCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+    <ProgressBar
+        android:id="@+id/indeterminateProductOfTheDayFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#A386E1"
+        android:indeterminateTintMode="src_atop"
+        android:layout_gravity="center"
+        />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

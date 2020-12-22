@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="4"
+    android:padding="8dp"
+    android:background="#ffffff"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="8dp">
+    <TextView
+        android:id="@+id/aboutUsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#2c2c2c"
+        android:fontFamily="@font/alegreya"
+        tools:text="Our mission"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/aboutUsMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/alegreya"
+        tools:text="ewQuest is here to make online purchase and delivery of products easy"
+        />
+</LinearLayout>

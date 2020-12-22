@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ewquest buy</string>
+    <string name="categories">Categories</string>
+    <string name="hot_sale">Hot Sale</string>
+    <string name="see_all">See all</string>
+    <string name="featured_products">Featured</string>
+    <string name="history">History</string>
+    <string name="search_all_categories">search all categories</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="review_very_bad">Very bad</string>
+    <string name="review_need_some_improvement">Need some improvement</string>
+    <string name="review_good">Good</string>
+    <string name="review_Great">Great</string>
+    <string name="review_awesome">Awesome</string>
+    <string name="review_default" />
+    <string name="google_maps_api_key">AIzaSyD8mG4-0WnsfUcTPP28zLJtqpjIxmz2TTY</string>
+    <string name="twilio_account_sid">AC3f64c2485c0b0745b9be9fff96ea918f</string>
+    <string name="twilio_auth_taken">c5b610167dfd21fc431f49dd37eeb28d</string>
+</resources>

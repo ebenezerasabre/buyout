@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:layout_gravity=""
+    >
+    <ImageView
+        android:id="@+id/trendingImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/background"
+        android:layout_margin="8dp"
+        />
+    <TextView
+        android:id="@+id/trendingName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/andika"
+        android:textSize="18sp"
+        tools:text="The long queen"
+        android:textColor="#909090"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:id="@+id/trendingNewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/andika"
+            tools:text="GH¢ 17.58"
+            android:textColor="#474747"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:layout_margin="4dp"
+            />
+        <ImageView
+            android:id="@+id/homeTrendAddCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_outline_shopping_cart_light_24"
+            android:layout_margin="4dp"
+            />
+        <ImageView
+            android:id="@+id/homeTrendAddWishList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_favorite_border_light_24"
+            android:layout_margin="4dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

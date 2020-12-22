@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:background="#fff"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_top">
+                    <TextView
+                        android:id="@+id/addressTopWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="checkout"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:drawableStart="@drawable/ic_keyboard_arrow_left_white_24dp"
+                        android:layout_margin="8dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selectAddressContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="8dp"
+                    >
+                    <TextView
+                        android:id="@+id/selectAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Select address"
+                        android:textColor="#333"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/holderAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <Button
+                        android:id="@+id/addressBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:text="Add New address"
+                        android:textAllCaps="false"
+                        android:padding="@dimen/dp_10"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:backgroundTint="#A386E1"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/addAddressContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                   android:layout_margin="16dp"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+                        <EditText
+                            android:id="@+id/location"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:inputType="textMultiLine"
+                            android:lines="1"
+                            android:hint="eg Bantama, Kumasi, Ghana"
+                            android:fontFamily="@font/alegreya"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="8dp"
+                            android:textColor="#2c2c2c"
+                            android:gravity="left"
+                            />
+                        <TextView
+                            android:id="@+id/locationHere"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Here"
+                            android:textSize="18sp"
+                            android:gravity="center_horizontal"
+                            android:textColor="#a386e1"
+                            />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/locationBuildingNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="1"
+                        android:hint="eg street, House no"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="#2c2c2c"
+                        />
+
+                    <EditText
+                        android:id="@+id/locationLandmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="1"
+                        android:hint="landmark"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="#2c2c2c"
+                        />
+
+                    <EditText
+                        android:id="@+id/locationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="1"
+                        android:hint="address name/nickName eg KNUST, UG, etc"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="8dp"
+                        android:textColor="#2c2c2c"
+                        />
+
+                    <EditText
+                        android:id="@+id/locationTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:lines="1"
+                        android:hint="location tag eg school, home, work etc"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="32dp"
+                        android:textColor="#2c2c2c"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <LinearLayout
+            android:id="@+id/paymentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select payment method"
+                android:textColor="#474747"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/alegreya"
+                android:textSize="20sp"
+                />
+
+            <Button
+                android:id="@+id/payOnDeliveryBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Pay on delivery"
+                android:textAllCaps="false"
+                android:padding="@dimen/dp_10"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:backgroundTint="#A386E1"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/saveLocationFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="bottom|end"
+        android:text="Save"
+        app:icon="@drawable/ic_outline_add_location_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/closeLocationFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+    <ProgressBar
+        android:id="@+id/indeterminateLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#A386E1"
+        android:indeterminateTintMode="src_atop"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

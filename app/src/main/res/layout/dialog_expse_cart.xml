@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    >
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            >-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/home_top"
+                        >
+                        <TextView
+                            android:id="@+id/cartExposeTopWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cart details"
+                            android:textSize="22sp"
+                            android:fontFamily="@font/alegreya"
+                            android:textColor="#ffffff"
+                            android:gravity="center_horizontal"
+                            android:drawableStart="@drawable/ic_keyboard_arrow_left_white_24dp"
+                            android:layout_margin="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/holderExposeCartImages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/exposeCartImageCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:layout_margin="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/caudex"
+                            android:text="Sub Total : "
+                            android:textSize="18sp"
+                            />
+                        <TextView
+                            android:id="@+id/exposeCartSubTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/alegreya"
+                            android:text=" GH¢ 23"
+                            android:textColor="#A386E1"
+                            android:textSize="30sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="8dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Size : "
+                                android:textColor="#474747"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/exposeCartSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="2 "
+                                android:textColor="#909090"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Color : "
+                                android:textColor="#474747"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/exposeCartColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Red "
+                                android:textColor="#909090"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_margin="8dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Quantity : "
+                                android:textColor="#474747"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/exposeCartQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="2 "
+                                android:textColor="#909090"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="20dp"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Material : "
+                                android:textColor="#474747"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/exposeCartMaterial"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/alegreya"
+                                android:text="Leather "
+                                android:textColor="#909090"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </ScrollView>
+<!--        </LinearLayout>-->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/exposeCartCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

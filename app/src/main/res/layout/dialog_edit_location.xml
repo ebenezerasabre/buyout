@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:id="@+id/addAddressContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+            <EditText
+                android:id="@+id/editLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:hint="eg Kings street, Kumasi, Ghana"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#2c2c2c"
+                android:gravity="left" />
+            <EditText
+                android:id="@+id/editLocationBuildingNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:hint="eg street, House/Flat No"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#2c2c2c" />
+            <EditText
+                android:id="@+id/editLocationLandmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:hint="landmark"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#2c2c2c" />
+            <EditText
+                android:id="@+id/editLocationName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:hint="address name/nickName eg KNUST, UG, etc"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#2c2c2c" />
+            <EditText
+                android:id="@+id/editLocationTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="1"
+                android:hint="location tag eg school, home, work etc"
+                android:fontFamily="@font/alegreya"
+                android:textSize="18sp"
+                android:layout_marginBottom="32dp"
+                android:textColor="#2c2c2c"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editLocationCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editLocationSaveFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_gravity="bottom|end"
+        android:text="Save"
+        app:icon="@drawable/ic_outline_add_location_24"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editLocationDeleteFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_delete_forever_black_24dp"
+        android:backgroundTint="@color/purple"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

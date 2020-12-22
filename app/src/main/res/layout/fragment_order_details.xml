@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/home_top"
+                    >
+                    <TextView
+                        android:id="@+id/orderDetailsTopWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Details"
+                        android:textSize="22sp"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#ffffff"
+                        android:gravity="center_horizontal"
+                        android:drawableStart="@drawable/ic_keyboard_arrow_left_white_24dp"
+                        android:layout_margin="8dp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/holderOrderDetailsImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/orderDetailsImageCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"/>
+                <TextView
+                    android:id="@+id/orderDetailsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="25sp"
+                    android:text="Air Jordan"
+                    android:textColor="#474747"
+                    android:layout_margin="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    />
+<!--                android:textColor="#e188c4"-->
+                <LinearLayout
+                    android:id="@+id/cartTotalContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/caudex"
+                        android:textSize="18sp"
+                        android:text="Total : "
+                        />
+                    <TextView
+                        android:id="@+id/orderDetailsOrderValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="30sp"
+                        android:text=" GH¢ 23"
+                        android:textColor="#A386E1" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2c2c2c"
+                    android:text="Your details"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/summary_back"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Name :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Ebenezer Asabre"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Phone :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsCustomerPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="0554290691"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Address :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsCustomerAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Tafo, ahenbronum street"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090"/>
+                </LinearLayout>
+                <!--            // Item summary-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2c2c2c"
+                    android:text="Item summary"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:textSize="18sp"
+                    android:background="@drawable/summary_back" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Size :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="XL"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Quantity :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="2"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Color :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsColor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Red"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Status :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="#e188c4"
+                        android:text="pending"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Expected delivery :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsDeliveryDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="12-34-2020"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="4dp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="Order id :"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:textColor="#474747" />
+                    <TextView
+                        android:id="@+id/orderDetailsOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="5ea2ff14fdf00d3d04e8ee95"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/alegreya"
+                        android:layout_marginStart="8dp"
+                        android:textColor="#909090"
+                        android:layout_marginBottom="40dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+<!--    </LinearLayout>-->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/orderDetailsCloseFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_baseline_close_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false" />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/orderDetailsDeleteOrderFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom|end"
+        app:icon="@drawable/ic_delete_forever_black_24dp"
+        android:backgroundTint="#A386E1"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

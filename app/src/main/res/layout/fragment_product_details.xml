@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#ffffff"
+    >
+<!--    *442#-->
+<!--    110-->
+    <ScrollView
+        android:id="@+id/scrollProductDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/home_top">
+                <TextView
+                    android:id="@+id/productDetailsTopWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Air Jordan - ff4"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="22sp"
+                    android:textColor="#fff"
+                    android:drawableStart="@drawable/ic_chevron_left_white_24dp"
+                   android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/holderProductDetailsImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                />
+
+            <!--    image count-->
+            <LinearLayout
+                android:id="@+id/productDetailsImageCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/priceAfterDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="GH¢ 24.50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/alegreya"
+                android:textSize="30sp"
+                android:text="GH¢ 23"
+                android:textColor="#A386E1"
+                />
+
+            <TextView
+                android:id="@+id/priceBeforeDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="GH¢ 24.50"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/alegreya"
+                android:background="@drawable/res_prev_price"
+                android:padding="8dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+                <RatingBar
+                    android:id="@+id/productDetailsRatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:stepSize="1"
+                    android:rating="3"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="64dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/alegreya"
+                    android:layout_alignBottom="@+id/productDetailsRatingBar"
+                    android:layout_marginBottom="-32dp"
+                    android:layout_marginStart="64dp"
+                    />
+
+
+                <ImageView
+                    android:id="@+id/productDetailsAddWishList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_favorite_border_light_24"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginTop="16dp"
+                    />
+<!--                android:src="@drawable/ic_favorite_purple_start_24dp"-->
+            </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/productDetailsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya"
+                    android:padding="16dp"
+                    android:text="Some lorem ipsum some lorem ipsum some lorem ipsum"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:textColor="#474747"
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select size "
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:textColor="#cb7bcb"
+                    android:layout_marginStart="8dp"
+                    android:textAllCaps="true"
+                    />
+                <TextView
+                    android:id="@+id/theSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="M"
+                    android:fontFamily="@font/andika"
+                    android:layout_marginStart="8dp"
+                    android:textSize="18sp"
+                    android:textColor="#474747"
+                    />
+            </LinearLayout>
+
+            <!--        color-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/holderSelectSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select color "
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    android:textColor="#cb7bcb"
+                    android:layout_marginStart="8dp"
+                    android:textAllCaps="true"
+                    />
+                <TextView
+                    android:id="@+id/theColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Black"
+                    android:fontFamily="@font/andika"
+                    android:layout_marginStart="8dp"
+                    android:textSize="18sp"
+                    android:textColor="#474747"
+                    />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/holderSelectColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <com.dev.materialspinner.MaterialSpinner
+                    android:id="@+id/quantitySpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <Button
+                    android:id="@+id/productDetailsReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#cb7bcb"
+                    android:fontFamily="@font/alegreya"
+                    android:text="Reviews"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/ic_rate_review_white_24dp"
+                    app:iconTint="#fff"
+                    android:padding="12dp"
+                    android:textSize="18sp"
+                    android:layout_margin="8dp"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/cartTotalContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/caudex"
+                    android:textSize="18sp"
+                    android:text="Total"
+                    android:layout_margin="8dp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/productDetailsTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="30sp"
+                    android:text="GH¢ 23"
+                    android:textColor="#A386E1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="40dp" />
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/boughtTogetherContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bought together"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderBoughtTogether"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/caudex"
+                    android:textSize="18sp"
+                    android:text="(Bought together)"
+                    android:textColor="#909090"
+                    android:layout_margin="8dp"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/caudex"
+                        android:textSize="18sp"
+                        android:text="Total price :"
+                        android:textColor="#474747"
+                        />
+                    <TextView
+                        android:id="@+id/boughtTogetherValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/caudex"
+                        android:textSize="18sp"
+                        android:text="GH¢ 23"
+                        android:textColor="#e9abe9"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/productDetailsAddAllToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:padding="10dp"
+                    android:text="Add all to cart"
+                    android:fontFamily="@font/alegreya"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:backgroundTint="#A386E1"
+                    app:icon="@drawable/ic_baseline_add_shopping_cart_24"
+                    app:iconTint="#fff"
+                    android:visibility="gone"
+                    />
+
+<!--                app:icon="@drawable/ic_shopping_cart_white_24dp"-->
+
+                <Button
+                    android:id="@+id/productDetailsAddAllToWishList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:padding="10dp"
+                    android:text="Add all to wish list"
+                    android:fontFamily="@font/alegreya"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:backgroundTint="#f2f2f2"
+                    android:textColor="#474747"
+                    app:icon="@drawable/ic_baseline_favorite_border_light_24"
+                    app:iconTint="#e9abe9"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerUsersAlsoViewed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/usersAlsoViewedSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="users also viewed"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderUsersAlsoViewed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="32dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerSellerRecommendation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/fromSellerSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="from seller"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderSellerRecommendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="32dp"
+                    />
+            </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/similarProductsSeeAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Similar products"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderSimilarProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="64dp"
+                    />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/productDetailsAddToCartFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|right"
+        app:icon="@drawable/ic_shopping_cart_white_24dp"
+        android:text="add to cart"
+        android:backgroundTint="#A386E1"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textAllCaps="false"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

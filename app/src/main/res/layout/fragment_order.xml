@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/headerOrders"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/home_top">
+            <TextView
+                android:id="@+id/ordersTopWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Orders"
+                android:textSize="22sp"
+                android:fontFamily="@font/alegreya"
+                android:textColor="#ffffff"
+                android:gravity="center_horizontal"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/holderOrders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/ordersFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|end"
+        android:text="Explore"
+        app:icon="@drawable/ic_explore_white_24dp"
+        android:backgroundTint="#A386E1"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+    <ProgressBar
+        android:id="@+id/indeterminateOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#A386E1"
+        android:indeterminateTintMode="src_atop"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

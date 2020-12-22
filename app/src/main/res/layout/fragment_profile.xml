@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/grad">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_launcher_foreground"
+                        app:civ_border_color="#FFFFFFFF"
+                        app:civ_border_width="2dp" />
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Username"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18dp"
+                        android:layout_margin="8dp" />
+                    <TextView
+                        android:id="@+id/uploadUserImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="save image"
+                        android:textColor="#ffffff"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18dp"
+                        android:layout_margin="8dp"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="General"
+                    android:textSize="25sp"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/caudex"
+                    android:textColor="#141414"
+                    />
+                <TextView
+                    android:id="@+id/profileMyAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="My account"
+                    android:layout_margin="16dp"
+                    android:textColor="#474747"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alegreya"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:background="@drawable/gray"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/profileEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit profile"
+                    android:layout_margin="16dp"
+                    android:textColor="#474747"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alegreya"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:background="@drawable/gray"
+                    android:padding="8dp" />
+                <TextView
+                    android:id="@+id/profileResetPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reset password"
+                    android:layout_margin="16dp"
+                    android:textColor="#474747"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/alegreya"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:background="@drawable/gray"
+                    android:padding="8dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share with friends"
+                    android:textSize="18sp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/caudex"
+                    android:textColor="#707070"
+                   android:drawableStart="@drawable/ic_share_gray_24dp"
+                   android:gravity="center_horizontal"
+                    android:layout_marginEnd="200dp"
+                    android:visibility="gone"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#333333"
+                        android:textSize="18sp"
+                        android:layout_alignParentStart="true"
+                        android:layout_margin="8dp"
+                        android:fontFamily="@font/alegreya"
+                        android:text="Wish list"
+                        />
+                    <com.suke.widget.SwitchButton
+                        android:id="@+id/shareWishList"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                    android:visibility="gone"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="8dp"
+                    android:fontFamily="@font/alegreya"
+                    android:text="History"
+                    />
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/shareHistory"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_alignParentEnd="true"
+                    />
+            </RelativeLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addUserImageFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#ffffff"
+        app:srcCompat="@drawable/ic_add_white_24dp"
+        app:tint="@color/colorPrimaryDark"
+        app:borderWidth="0dp"
+        />
+
+<!--    android:layout_marginTop="215dp"-->
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editProfileFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="bottom|right"
+        android:text="edit"
+        app:icon="@drawable/ic_edit_white_24dp"
+        android:backgroundTint="#A386E1"
+        android:textColor="#fff"
+        app:iconTint="#fff"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        />
+
+    <ProgressBar
+        android:id="@+id/indeterminateProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="#A386E1"
+        android:indeterminateTintMode="src_atop"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

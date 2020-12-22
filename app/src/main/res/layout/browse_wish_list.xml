@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="6"
+    android:layout_margin="8dp"
+    >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+        <ImageView
+            android:id="@+id/wishListImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_launcher_foreground"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wishListDesc"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/wishListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/alegreya"
+            android:text="Black Shoe"
+            android:textColor="#474747"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:fontFamily="@font/alegreya"
+            android:text="Material"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/wishListMaterial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:fontFamily="@font/alegreya"
+            android:text="Yark Leather"
+            android:textColor="#909090"
+            />
+
+        <TextView
+            android:id="@+id/wishListPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya"
+            android:textSize="18sp"
+            android:text="GH¢ 80.00"
+            android:layout_marginTop="5sp"
+            android:textColor="#909090"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wishListCancel"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_delete_forever_black_24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.919"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+    <!--    android:background="@drawable/cart_remove"-->
+
+    <!--    android:background="@drawable/ic_shopping_cart_black_24dp"-->
+
+    <!--    android:textColor="#e188c4"-->
