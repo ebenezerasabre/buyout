@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dev.materialspinner.MaterialSpinner;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
@@ -83,7 +84,8 @@ public class ProductDetailsFragment extends Fragment implements
 //  TextView productDetailsSold;
     MaterialSpinner mMaterialSpinnerSpinner;
 
-    Button productDetailsReviews;
+//    Button productDetailsReviews;
+    MaterialButton productDetailsReviews;
     TextView productDetailsTotalPrice;
     private ExtendedFloatingActionButton addToCartFAB;
 

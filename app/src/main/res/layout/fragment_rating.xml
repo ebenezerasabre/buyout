@@ -90,24 +90,28 @@
                     android:lines="5"
                     android:hint="Tell us what you loved"
                     android:gravity="top"
-                    android:layout_margin="8dp"
+                    android:layout_margin="16dp"
                     android:fontFamily="@font/alegreya"
                     android:textSize="18sp"
                     />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/submitRating"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="32dp"
-                    android:padding="10dp"
-                    android:text="Send feedback"
-                    android:fontFamily="@font/alegreya"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
+                    app:cornerRadius="32dp"
                     android:backgroundTint="#A386E1"
+                    android:fontFamily="@font/alegreya"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     app:icon="@drawable/ic_outline_send_24"
                     />
+
 
 
             </LinearLayout>

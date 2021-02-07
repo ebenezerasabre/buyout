@@ -82,6 +82,9 @@ public class ViewModelHomeFragment extends ViewModel {
     public static Cart cartDetails;
     public static Product productDetails;
 
+    // signUpObject
+    public static HashMap<String, String> createObject = new HashMap<>();
+
     // when adding more products to cart at once
     // eg bought together
 //    public static List<Product> addAllToCart;

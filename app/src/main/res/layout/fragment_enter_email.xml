@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/home_top"
+                >
+                <TextView
+                    android:id="@+id/enterEmailBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/alegreya"
+                    android:textColor="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    app:drawableStartCompat="@drawable/ic_keyboard_arrow_left_white_24dp" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="galaxy@gmail.com"
+                android:padding="8dp"
+                app:endIconMode="clear_text"
+                app:boxCornerRadiusTopStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:helperTextEnabled="true"
+                app:helperText="We will send you your ride receipts"
+                android:layout_margin="16dp"
+                app:startIconDrawable="@drawable/ic_outline_alternate_email_24"
+                app:startIconContentDescription="email"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:endIconMode="password_toggle"
+                app:boxCornerRadiusTopStart="4dp"
+                app:boxCornerRadiusTopEnd="4dp"
+                app:boxCornerRadiusBottomStart="4dp"
+                app:boxCornerRadiusBottomEnd="4dp"
+                app:helperTextEnabled="true"
+                app:helperText="use strong password"
+                android:layout_margin="16dp"
+                app:startIconDrawable="@drawable/ic_outline_lock_24"
+                app:startIconContentDescription="password"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/enterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/alegreya"
+                    android:textSize="18sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/enterEmailContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cornerRadius="32dp"
+                android:backgroundTint="#A386E1"
+                android:fontFamily="@font/alegreya"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

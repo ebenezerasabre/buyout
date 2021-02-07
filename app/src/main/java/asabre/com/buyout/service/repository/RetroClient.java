@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroClient {
     private static final String TAG = RetroClient.class.getSimpleName();
-    public static final String BASE_URL = "https://quest.asabre.com/buyout-0.0.1-SNAPSHOT/";
+    public static final String BASE_URL = "https://www.quest.ewquest.com/buyout-0.0.1-SNAPSHOT/";
     private static Retrofit mRetrofit = null;
 
     static Retrofit getInstance(){
@@ -30,3 +30,7 @@ public class RetroClient {
     }
 
 }
+
+
+
+

@@ -13,6 +13,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.HashMap;
@@ -37,7 +38,7 @@ public class ProductRatingFragment extends Fragment implements BaseFragment {
     private RatingBar mProductRatingBar;
     private TextView mRatingScale;
     private EditText mRatingFeedback;
-    private Button mSubmitRating;
+    private MaterialButton mSubmitRating;
     private ExtendedFloatingActionButton mProductRatingFAB;
     private ViewModelHomeFragment mViewModelHomeFragment;
     private ProgressDialog mProgressDialog;

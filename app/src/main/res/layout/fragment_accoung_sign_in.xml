@@ -26,7 +26,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@drawable/home_top">
+                    android:background="@drawable/home_top"
+                    android:layout_marginBottom="32dp"
+                    >
                     <TextView
                         android:id="@+id/signInTopWord"
                         android:layout_width="match_parent"
@@ -42,45 +44,120 @@
 
 
 
-                <EditText
-                    android:id="@+id/signInPhoneNumber"
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:lines="1"
-                    android:hint="Phone number"
-                    android:gravity="top"
-                    android:layout_margin="16dp"
-                    android:fontFamily="@font/alegreya"
-                    android:textSize="18sp"
-                    />
+                    android:hint="0554xxxxxx"
+                    android:padding="8dp"
+                    app:endIconMode="clear_text"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:helperTextEnabled="true"
+                    app:helperText="For purchase confirmation"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="10"
+                    app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+                    app:startIconContentDescription="contact"
+                    android:layout_margin="8dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signInPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/alegreya"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/signInPassword"
+
+<!--                <EditText-->
+<!--                    android:id="@+id/signInPhoneNumber"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="phone"-->
+<!--                    android:lines="1"-->
+<!--                    android:hint="Phone number"-->
+<!--                    android:gravity="top"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:fontFamily="@font/alegreya"-->
+<!--                    android:textSize="18sp"-->
+<!--                    />-->
+
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:lines="1"
-                    android:hint="Password"
-                    android:gravity="top"
-                    android:layout_margin="16dp"
-                    android:fontFamily="@font/alegreya"
-                    android:textSize="18sp"
-                    />
+                    android:padding="8dp"
+                    app:endIconMode="password_toggle"
+                    app:boxCornerRadiusTopStart="4dp"
+                    app:boxCornerRadiusTopEnd="4dp"
+                    app:boxCornerRadiusBottomStart="4dp"
+                    app:boxCornerRadiusBottomEnd="4dp"
+                    app:helperTextEnabled="true"
+                    app:helperText="enter your password"
+                    android:layout_margin="8dp"
+                    app:startIconDrawable="@drawable/ic_outline_lock_24"
+                    app:startIconContentDescription="password"
 
-                <Button
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signInPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/alegreya"
+                        android:textSize="18sp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--                <EditText-->
+<!--                    android:id="@+id/signInPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:lines="1"-->
+<!--                    android:hint="Password"-->
+<!--                    android:gravity="top"-->
+<!--                    android:layout_margin="16dp"-->
+<!--                    android:fontFamily="@font/alegreya"-->
+<!--                    android:textSize="18sp"-->
+<!--                    />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/signInFAB"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="32dp"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginEnd="16dp"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:text="Sign in"-->
+<!--                    android:fontFamily="@font/alegreya"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:backgroundTint="#A386E1"-->
+<!--                    app:icon="@drawable/ic_verified_user_white_24dp"-->
+<!--                    />-->
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/signInFAB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:padding="10dp"
-                    android:text="Sign in"
-                    android:fontFamily="@font/alegreya"
-                    android:textAllCaps="false"
-                    android:textSize="18sp"
+                    app:cornerRadius="32dp"
                     android:backgroundTint="#A386E1"
+                    android:fontFamily="@font/alegreya"
+                    android:text="Sign in"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:layout_margin="16dp"
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
                     app:icon="@drawable/ic_verified_user_white_24dp"
                     />
 

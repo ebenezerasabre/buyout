@@ -52,68 +52,112 @@
                         android:gravity="center_horizontal"
                         android:visibility="gone"
                         />
-                    <EditText
-                        android:id="@+id/editFirstName"
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
-                        android:lines="1"
                         android:hint="firstname"
-                        android:gravity="top"
-                        android:layout_margin="16dp"
-                        android:fontFamily="@font/alegreya"
-                        android:textSize="18sp"
-                        />
-                    <EditText
-                        android:id="@+id/editLastName"
+                        android:padding="8dp"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:fontFamily="@font/alegreya"
+                            android:textSize="18sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
-                        android:lines="1"
                         android:hint="lastname"
-                        android:gravity="top"
-                        android:layout_margin="16dp"
-                        android:fontFamily="@font/alegreya"
-                        android:textSize="18sp"
-                        />
-                    <EditText
-                        android:id="@+id/editEmail"
+                        android:padding="8dp"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:fontFamily="@font/alegreya"
+                            android:textSize="18sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textWebEmailAddress"
-                        android:lines="1"
                         android:hint="email"
-                        android:gravity="top"
-                        android:layout_margin="16dp"
-                        android:fontFamily="@font/alegreya"
-                        android:textSize="18sp"
-                        />
-                    <EditText
-                        android:id="@+id/editPhoneNumber"
+                        android:padding="8dp"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:fontFamily="@font/alegreya"
+                            android:textSize="18sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="phone"
-                        android:lines="1"
-                        android:hint="Phone number"
-                        android:gravity="top"
-                        android:layout_margin="16dp"
-                        android:fontFamily="@font/alegreya"
-                        android:textSize="18sp"
-                        />
-                    <Button
+                        android:hint="number"
+                        android:padding="8dp"
+                        app:endIconMode="clear_text"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="10"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editPhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:fontFamily="@font/alegreya"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/saveEditedProfile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="20dp"
-                        android:padding="10dp"
-                        android:text="Save"
-                        android:fontFamily="@font/alegreya"
-                        android:textAllCaps="false"
-                        android:textSize="18sp"
+                        app:cornerRadius="32dp"
                         android:backgroundTint="#A386E1"
+                        android:fontFamily="@font/alegreya"
+                        android:text="Save"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"
+                        android:layout_margin="16dp"
+                        android:padding="8dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         app:icon="@drawable/ic_baseline_save_24"
                         />
                 </LinearLayout>
@@ -137,36 +181,56 @@
                         android:gravity="center_horizontal"
                         android:visibility="gone"
                         />
-                    <EditText
-                        android:id="@+id/confirmPassword"
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword"
-                        android:lines="1"
-                        android:hint="enter password"
-                        android:gravity="top"
+                        android:padding="8dp"
+                        app:endIconMode="password_toggle"
+                        app:boxCornerRadiusTopStart="4dp"
+                        app:boxCornerRadiusTopEnd="4dp"
+                        app:boxCornerRadiusBottomStart="4dp"
+                        app:boxCornerRadiusBottomEnd="4dp"
+                        app:helperTextEnabled="true"
+                        app:helperText="use strong password"
                         android:layout_margin="16dp"
-                        android:fontFamily="@font/alegreya"
-                        android:textSize="18sp"
-                        />
-                    <Button
+                        app:startIconDrawable="@drawable/ic_outline_lock_24"
+                        app:startIconContentDescription="password"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/confirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:fontFamily="@font/alegreya"
+                            android:textSize="18sp"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/confirmPasswordButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:padding="10dp"
-                        android:text="Confirm password"
-                        android:fontFamily="@font/alegreya"
-                        android:textAllCaps="false"
-                        android:textSize="18sp"
+                        app:cornerRadius="32dp"
                         android:backgroundTint="#A386E1"
+                        android:fontFamily="@font/alegreya"
+                        android:text="Confirm password"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"
+                        android:layout_margin="16dp"
+                        android:padding="8dp"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
                         app:icon="@drawable/ic_verified_user_white_24dp"
                         />
+
                 </LinearLayout>
 
             </LinearLayout>
         </ScrollView>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -28,14 +28,13 @@
                     android:id="@+id/productDetailsTopWord"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Air Jordan - ff4"
+                    android:text="@string/air_jordan_ff4"
                     android:gravity="center_horizontal"
                     android:fontFamily="@font/alegreya"
                     android:textSize="22sp"
                     android:textColor="#fff"
-                    android:drawableStart="@drawable/ic_chevron_left_white_24dp"
-                   android:layout_margin="8dp"
-                    />
+                    android:layout_margin="8dp"
+                    app:drawableStartCompat="@drawable/ic_chevron_left_white_24dp" />
             </LinearLayout>
 
 
@@ -216,22 +215,43 @@
                     android:layout_alignParentStart="true"
                     />
 
-                <Button
+<!--                <Button-->
+<!--                    android:id="@+id/productDetailsReviews"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:backgroundTint="#cb7bcb"-->
+<!--                    android:fontFamily="@font/alegreya"-->
+<!--                    android:text="Reviews"-->
+<!--                    android:textAllCaps="false"-->
+<!--                    app:icon="@drawable/ic_rate_review_white_24dp"-->
+<!--                    app:iconTint="#fff"-->
+<!--                    android:padding="12dp"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    />-->
+
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/productDetailsReviews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@android:color/white"
+                    app:cornerRadius="16dp"
                     android:backgroundTint="#cb7bcb"
                     android:fontFamily="@font/alegreya"
                     android:text="Reviews"
+                    android:textColor="#fff"
                     android:textAllCaps="false"
+                    android:textSize="18sp"
                     app:icon="@drawable/ic_rate_review_white_24dp"
                     app:iconTint="#fff"
                     android:padding="12dp"
-                    android:textSize="18sp"
-                    android:layout_margin="8dp"
                     android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
                     />
+
+
             </RelativeLayout>
             <LinearLayout
                 android:id="@+id/cartTotalContainer"

@@ -13,7 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,10 +40,13 @@ public class SignInFragment extends Fragment implements BaseFragment {
     private static final String TAG = SignInFragment.class.getSimpleName();
 
     private TextView signInTopWord;
-    private EditText signInPhoneNumber;
-    private EditText signInPassword;
+//    private EditText signInPhoneNumber;
+    private TextInputEditText signInPhoneNumber;
+//    private EditText signInPassword;
+    private TextInputEditText signInPassword;
     private TextView signUpHere;
-    private Button signInFAB;
+//    private Button signInFAB;
+    private MaterialButton signInFAB;
 
     // get viewModel
     private ViewModelHomeFragment mViewModelHomeFragment;
@@ -362,12 +367,13 @@ public class SignInFragment extends Fragment implements BaseFragment {
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SignUpFragment signUpFragment = new SignUpFragment();
+//                SignUpFragment signUpFragment = new SignUpFragment();
+                EnterNumberFragment enterNumberFragment = new EnterNumberFragment();
                 if(getActivity() != null){
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
                     transaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
-                    transaction.replace(R.id.containerProducts, signUpFragment);
+                    transaction.replace(R.id.containerProducts, enterNumberFragment);
                     transaction.addToBackStack(null);
                     transaction.commit();
                 }

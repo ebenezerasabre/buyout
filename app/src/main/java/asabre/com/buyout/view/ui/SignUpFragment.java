@@ -8,16 +8,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -41,12 +39,13 @@ public class SignUpFragment extends Fragment implements BaseFragment {
 
     private TextView signUpTopWord;
 //    private TextView signUpWarning;
-    private EditText firstName;
-    private EditText lastName;
-    private EditText phoneNumber;
-    private EditText email;
-    private EditText password;
-    private Button signUpFAB;
+    private TextInputEditText enterFirstName;
+    private TextInputEditText enterLastName;
+//    private EditText phoneNumber;
+//    private EditText email;
+//    private EditText password;
+//    private Button signUpFAB;
+    private MaterialButton signUpFAB;
     private TextView signInHere;
     private ViewModelHomeFragment mViewModelHomeFragment;
     String customerId = "";
@@ -64,26 +63,27 @@ public class SignUpFragment extends Fragment implements BaseFragment {
     private void init(View view){
         signUpTopWord = view.findViewById(R.id.signUpTopWord);
 //        signUpWarning = view.findViewById(R.id.signUpWarning);
-        firstName = view.findViewById(R.id.signUpFirstName);
-        lastName = view.findViewById(R.id.signUpLastName);
-        phoneNumber = view.findViewById(R.id.signUpPhoneNumber);
-        password = view.findViewById(R.id.signUpPassword);
-        email = view.findViewById(R.id.signUpEmail);
+        enterFirstName = view.findViewById(R.id.enterFirstName);
+        enterLastName = view.findViewById(R.id.enterLastName);
+//        phoneNumber = view.findViewById(R.id.signUpPhoneNumber);
+//        password = view.findViewById(R.id.signUpPassword);
+//        email = view.findViewById(R.id.signUpEmail);
         signUpFAB = view.findViewById(R.id.signUpFAB);
         signInHere = view.findViewById(R.id.signInHere);
         mViewModelHomeFragment = ViewModelProviders.of(Objects.requireNonNull(getActivity())).get(ViewModelHomeFragment.class);
         mViewModelHomeFragment.init();
 
-        firstName.requestFocus();
+        enterFirstName.requestFocus();
     }
 
     private boolean checkCustomerFields(){
         boolean empty = false;
         ArrayList<String> customerFields = new ArrayList<>();
-        customerFields.add(firstName.getText().toString());
-        customerFields.add(lastName.getText().toString());
-        customerFields.add(phoneNumber.getText().toString());
-        customerFields.add(password.getText().toString());
+        customerFields.add(enterFirstName.getText().toString());
+        customerFields.add(enterLastName.getText().toString());
+
+//        customerFields.add(phoneNumber.getText().toString());
+//        customerFields.add(password.getText().toString());
 
         for(String str : customerFields){
             if (str.isEmpty()) { empty = true; break; }
@@ -91,14 +91,28 @@ public class SignUpFragment extends Fragment implements BaseFragment {
         return !empty;
     }
 
-    private HashMap<String, String> cusObj(){
-        HashMap<String, String> obj = new HashMap<>();
-        obj.put("firstName", firstName.getText().toString());
-        obj.put("lastName", lastName.getText().toString());
-        obj.put("phoneNumber", phoneNumber.getText().toString());
-        obj.put("password", password.getText().toString());
-        obj.put("email", email.getText().toString());
-        return obj;
+//    private HashMap<String, String> cusObj(){
+//        HashMap<String, String> obj = new HashMap<>();
+//        obj.put("firstName", firstName.getText().toString());
+//        obj.put("lastName", lastName.getText().toString());
+//        obj.put("phoneNumber", phoneNumber.getText().toString());
+//        obj.put("password", password.getText().toString());
+//        obj.put("email", email.getText().toString());
+//        return obj;
+//    }
+
+    private void setFields(){
+        ViewModelHomeFragment.createObject.put("firstName", enterFirstName.getText().toString());
+        ViewModelHomeFragment.createObject.put("lastName", enterLastName.getText().toString());
+    }
+    private void signUpCustomer(){
+        mViewModelHomeFragment.signUpCustomer(ViewModelHomeFragment.createObject).observe(Objects.requireNonNull(getActivity()), new Observer<OutLaw>() {
+            @Override
+            public void onChanged(OutLaw outLaw) {
+                dismissProgressDialog();
+                signUpState(outLaw);
+            }
+        });
     }
 
     private View.OnClickListener signUpViewModel(){
@@ -106,14 +120,9 @@ public class SignUpFragment extends Fragment implements BaseFragment {
           @Override
           public void onClick(View v) {
               if(checkCustomerFields()){
+                  setFields();
                   showProgressDialog();
-                  mViewModelHomeFragment.signUpCustomer(cusObj()).observe(Objects.requireNonNull(getActivity()), new Observer<OutLaw>() {
-                      @Override
-                      public void onChanged(OutLaw outLaw) {
-                          dismissProgressDialog();
-                          signUpState(outLaw);
-                      }
-                  });
+                 signUpCustomer();
               }   else {
                   Toast.makeText(getContext(),"Field(s) can't be empty", Toast.LENGTH_SHORT).show();
               }
@@ -143,9 +152,15 @@ public class SignUpFragment extends Fragment implements BaseFragment {
     private UserEntity customerInfo(){
         UserEntity userEntity = new UserEntity();
         userEntity.setCustomerId(customerId);
-        userEntity.setFirstName(Objects.requireNonNull(firstName.getText()).toString());
-        userEntity.setLastName(Objects.requireNonNull(lastName.getText()).toString());
-        userEntity.setPhoneNumber(Objects.requireNonNull(phoneNumber.getText()).toString());
+
+//        userEntity.setFirstName(Objects.requireNonNull(firstName.getText()).toString());
+//        userEntity.setLastName(Objects.requireNonNull(lastName.getText()).toString());
+//        userEntity.setPhoneNumber(Objects.requireNonNull(phoneNumber.getText()).toString());
+
+        userEntity.setFirstName(ViewModelHomeFragment.createObject.get("firstName"));
+        userEntity.setLastName(ViewModelHomeFragment.createObject.get("lastName"));
+        userEntity.setPhoneNumber(ViewModelHomeFragment.createObject.get("phoneNumber"));
+
         userEntity.setUserImage("");
         return userEntity;
     }
@@ -287,7 +302,7 @@ public class SignUpFragment extends Fragment implements BaseFragment {
     @Override
     public void onStart() {
         super.onStart();
-        signUpTopWord.setOnClickListener(goBackListener());
+        signUpTopWord.setOnClickListener(PreviousFragmentListener());
         signUpFAB.setOnClickListener(signUpViewModel());
         signInHere.setOnClickListener(loadSignInListener());
     }
@@ -303,8 +318,20 @@ public class SignUpFragment extends Fragment implements BaseFragment {
     @Override
     public void onBackPressed() {
         if(MainActivity.mHomeTrack == MainActivity.HomeTrack.PRODUCTS){
-            goBack();
+//            goBack();
+            loadEnterEmailFragment();
         }
+    }
+
+    private void loadEnterEmailFragment() {
+
+        EnterEmailFragment enterEmailFragment = new EnterEmailFragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
+        transaction.replace(R.id.containerProducts, enterEmailFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 
     private void goBack(){
@@ -313,11 +340,12 @@ public class SignUpFragment extends Fragment implements BaseFragment {
         removeThisFragment();
     }
 
-    private View.OnClickListener goBackListener(){
+    private View.OnClickListener PreviousFragmentListener(){
         return new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goBack();
+//                goBack();
+                loadEnterEmailFragment();
             }
         };
     }
